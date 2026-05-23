@@ -1,0 +1,25 @@
+============================================================
+  POPULATION REPORT
+  City     : Chennai
+  Scenario : Baseline
+  Generated: 2026-05-23 23:00
+============================================================
+
+  Total Population   : 209,556
+  Average per Zone   : 52,389
+  Max Population     : 59,405
+  Min Population     : 39,600
+
+  Highest Zone : lucknow (59,405)
+  Lowest Zone  : mumbai (39,600)
+
+  Zone Breakdown:
+  ----------------------------------------
+  chennai                  53,047
+  mumbai                   39,600
+  kolkata                  57,504
+  lucknow                  59,405
+
+============================================================
+  End of Report
+============================================================

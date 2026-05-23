@@ -1,0 +1,10 @@
+category,zone,recommendation,severity
+Traffic,chennai,Traffic in chennai is within normal range. No action required.,🟢 Normal
+Traffic,kolkata,Traffic in kolkata is within normal range. No action required.,🟢 Normal
+Traffic,lucknow,Traffic in lucknow is within normal range. No action required.,🟢 Normal
+Traffic,mumbai,Traffic in mumbai is within normal range. No action required.,🟢 Normal
+Weather,City-wide,Temperature averaging 14.99°C. Conditions are normal.,🟢 Normal
+Population,chennai,"Population in chennai is 53,047. Within manageable range.",🟢 Normal
+Population,mumbai,"Population in mumbai is 39,600. Within manageable range.",🟢 Normal
+Population,kolkata,"Population in kolkata is 57,504. Within manageable range.",🟢 Normal
+Population,lucknow,"Population in lucknow is 59,405. Within manageable range.",🟢 Normal

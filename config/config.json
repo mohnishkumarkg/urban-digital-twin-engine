@@ -1,0 +1,28 @@
+{
+    "default_city": "Chennai",
+    "simulation_days": 14,
+    "num_zones": 8,
+    "default_scenarios": [
+        "Baseline",
+        "Heatwave",
+        "Festival"
+    ],
+    "population": {
+        "mean": 50000,
+        "std": 10000,
+        "seed": 42
+    },
+    "traffic": {
+        "base_volume": 500.0,
+        "noise_std": 20.0,
+        "seed": 42
+    },
+    "weather": {
+        "base_temp": 15.0,
+        "temp_amplitude": 10.0,
+        "base_humidity": 60.0,
+        "seed": 42
+    },
+    "logging_level": "INFO",
+    "output_dir": "outputs"
+}

@@ -1,0 +1,141 @@
+============================================================
+  POPULATION REPORT
+  City     : Chennai
+  Scenario : Baseline
+  Generated: 2026-05-23 23:00
+============================================================
+
+  Total Population   : 209,556
+  Average per Zone   : 52,389
+  Max Population     : 59,405
+  Min Population     : 39,600
+
+  Highest Zone : lucknow (59,405)
+  Lowest Zone  : mumbai (39,600)
+
+  Zone Breakdown:
+  ----------------------------------------
+  chennai                  53,047
+  mumbai                   39,600
+  kolkata                  57,504
+  lucknow                  59,405
+
+============================================================
+  End of Report
+============================================================
+
+
+============================================================
+  TRAFFIC REPORT
+  City     : Chennai
+  Scenario : Baseline
+  Generated: 2026-05-23 23:00
+============================================================
+
+  Busiest Zone   : lucknow
+  Quietest Zone  : kolkata
+
+  Average Traffic per Zone:
+  ----------------------------------------
+  chennai              avg:   668.86  max:   942.70  min:   362.05
+  kolkata              avg:   667.67  max:   958.42  min:   366.40
+  lucknow              avg:   670.20  max:   955.48  min:   365.72
+  mumbai               avg:   669.72  max:   954.35  min:   364.40
+
+  Peak Traffic Hour per Zone:
+  ----------------------------------------
+  chennai              peak hour: 18:00  avg traffic:   857.86
+  kolkata              peak hour: 08:00  avg traffic:   849.64
+  lucknow              peak hour: 08:00  avg traffic:   855.83
+  mumbai               peak hour: 08:00  avg traffic:   849.60
+
+  Weekend vs Weekday Traffic:
+  ----------------------------------------
+  chennai              weekday:   707.27  weekend:   563.25
+  kolkata              weekday:   705.29  weekend:   564.19
+  lucknow              weekday:   708.49  weekend:   564.91
+  mumbai               weekday:   707.91  weekend:   564.70
+
+============================================================
+  End of Report
+============================================================
+
+
+============================================================
+  WEATHER REPORT
+  City     : Chennai
+  Scenario : Baseline
+  Generated: 2026-05-23 23:00
+============================================================
+
+  Average Temperature : 14.99°C
+  Max Temperature     : 28.07°C
+  Min Temperature     : 1.84°C
+  Average Humidity    : 59.74%
+  Max Humidity        : 70.72%
+  Min Humidity        : 47.71%
+
+  Hottest Day : 2024-06-11  →  28.07°C
+  Coldest Day : 2024-12-06  →  1.84°C
+
+  Days Above 30°C : 0
+  Days Below  5°C : 23
+
+============================================================
+  End of Report
+============================================================
+
+
+============================================================
+  RECOMMENDATIONS REPORT
+  City     : Chennai
+  Scenario : Baseline
+  Generated: 2026-05-23 23:00
+============================================================
+
+  Total Recommendations : 9
+  🔴 Critical           : 0
+  🟡 Warning            : 0
+  🟢 Normal             : 9
+
+  --------------------------------------------------------
+
+  [🟢 Normal]  Traffic — chennai
+  Traffic in chennai is within normal range. No action required.
+  --------------------------------------------------------
+
+  [🟢 Normal]  Traffic — kolkata
+  Traffic in kolkata is within normal range. No action required.
+  --------------------------------------------------------
+
+  [🟢 Normal]  Traffic — lucknow
+  Traffic in lucknow is within normal range. No action required.
+  --------------------------------------------------------
+
+  [🟢 Normal]  Traffic — mumbai
+  Traffic in mumbai is within normal range. No action required.
+  --------------------------------------------------------
+
+  [🟢 Normal]  Weather — City-wide
+  Temperature averaging 14.99°C. Conditions are normal.
+  --------------------------------------------------------
+
+  [🟢 Normal]  Population — chennai
+  Population in chennai is 53,047. Within manageable range.
+  --------------------------------------------------------
+
+  [🟢 Normal]  Population — mumbai
+  Population in mumbai is 39,600. Within manageable range.
+  --------------------------------------------------------
+
+  [🟢 Normal]  Population — kolkata
+  Population in kolkata is 57,504. Within manageable range.
+  --------------------------------------------------------
+
+  [🟢 Normal]  Population — lucknow
+  Population in lucknow is 59,405. Within manageable range.
+  --------------------------------------------------------
+
+============================================================
+  End of Report
+============================================================

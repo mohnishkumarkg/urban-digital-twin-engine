@@ -1,0 +1,23 @@
+============================================================
+  WEATHER REPORT
+  City     : Chennai
+  Scenario : Baseline
+  Generated: 2026-05-23 23:00
+============================================================
+
+  Average Temperature : 14.99°C
+  Max Temperature     : 28.07°C
+  Min Temperature     : 1.84°C
+  Average Humidity    : 59.74%
+  Max Humidity        : 70.72%
+  Min Humidity        : 47.71%
+
+  Hottest Day : 2024-06-11  →  28.07°C
+  Coldest Day : 2024-12-06  →  1.84°C
+
+  Days Above 30°C : 0
+  Days Below  5°C : 23
+
+============================================================
+  End of Report
+============================================================

@@ -1,0 +1,34 @@
+============================================================
+  TRAFFIC REPORT
+  City     : Chennai
+  Scenario : Baseline
+  Generated: 2026-05-23 23:00
+============================================================
+
+  Busiest Zone   : lucknow
+  Quietest Zone  : kolkata
+
+  Average Traffic per Zone:
+  ----------------------------------------
+  chennai              avg:   668.86  max:   942.70  min:   362.05
+  kolkata              avg:   667.67  max:   958.42  min:   366.40
+  lucknow              avg:   670.20  max:   955.48  min:   365.72
+  mumbai               avg:   669.72  max:   954.35  min:   364.40
+
+  Peak Traffic Hour per Zone:
+  ----------------------------------------
+  chennai              peak hour: 18:00  avg traffic:   857.86
+  kolkata              peak hour: 08:00  avg traffic:   849.64
+  lucknow              peak hour: 08:00  avg traffic:   855.83
+  mumbai               peak hour: 08:00  avg traffic:   849.60
+
+  Weekend vs Weekday Traffic:
+  ----------------------------------------
+  chennai              weekday:   707.27  weekend:   563.25
+  kolkata              weekday:   705.29  weekend:   564.19
+  lucknow              weekday:   708.49  weekend:   564.91
+  mumbai               weekday:   707.91  weekend:   564.70
+
+============================================================
+  End of Report
+============================================================
