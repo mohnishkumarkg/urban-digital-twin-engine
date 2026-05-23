@@ -229,12 +229,12 @@ with tab2:
     c3.metric("Zones Tracked", len(ZONES))
  
     st.markdown("---")
-
     zone_filter = st.multiselect(
-        "Filter Zones",
-        options=ZONES,
-        default=ZONES[:2] if len(ZONES) >= 2 else ZONES
-    )
+    "Filter Zones",
+    options=ZONES,
+    default=ZONES[:2] if len(ZONES) >= 2 else ZONES,
+    key="traffic_zone_filter"
+)
     filtered = mod_traffic[mod_traffic["Zone"].isin(zone_filter)]
 
     col1, col2 = st.columns(2)
