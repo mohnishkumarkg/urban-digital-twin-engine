@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UDT-DIE Urban Decision Support Platform
 
 This project is a synthetic city decision-support platform built with Python, NumPy, Pandas, and Streamlit. It simulates urban systems including transportation, environment, energy, demographics, and infrastructure to evaluate policy scenarios and generate actionable recommendations.
@@ -70,3 +71,7 @@ Deploy to Streamlit Community Cloud by pushing to GitHub and connecting the repo
 - What are the top three recommendations for the next quarter?
 
 This platform aligns with digital twin initiatives from NASA, Siemens, IBM, and World Bank, providing a virtual laboratory for urban planning and policy analysis.
+=======
+# urban-digital-twin-engine
+Smart city simulation and decision intelligence platform built using Python, NumPy, Pandas, and Streamlit.
+>>>>>>> 44e1f1d2ff04d878c818347a6281815c62ed7d8e

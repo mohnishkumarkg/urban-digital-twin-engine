@@ -1,9 +1,14 @@
 import streamlit as st
 import pandas as pd
+import html
+
+
+
+api_key = st.secrets["API_KEY"]
 import plotly.express as px
 import plotly.graph_objects as go
-from config       import load_config
-from core         import generate_population, generate_traffic, generate_weather
+from config.loader import load_config
+from core import generate_population, generate_traffic, generate_weather
 from analytics    import (
     population_summary, top_zone_population, bottom_zone_population,
     traffic_summary, peak_traffic_hour, busiest_zone, quietest_zone,
@@ -11,7 +16,7 @@ from analytics    import (
     days_above_temp, days_below_temp,
 )
 from intelligence import run_intelligence
- 
+
 # ---------------------------------------------------------------------------
 # PAGE CONFIG
 # ---------------------------------------------------------------------------
