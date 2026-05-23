@@ -1,10 +1,8 @@
 import streamlit as st
 import pandas as pd
-import html
 
 
-
-api_key = st.secrets["API_KEY"]
+api_key = st.secrets.get("API_KEY", None)
 import plotly.express as px
 import plotly.graph_objects as go
 from config.loader import load_config
@@ -225,21 +223,28 @@ with tab2:
     c3.metric("Zones Tracked", len(ZONES))
  
     st.markdown("---")
+
+    zone_filter = st.multiselect(
+        "Filter Zones",
+        options=ZONES,
+        default=ZONES[:2] if len(ZONES) >= 2 else ZONES
+    )
+    filtered = mod_traffic[mod_traffic["Zone"].isin(zone_filter)]
+
     col1, col2 = st.columns(2)
- 
+
     with col1:
         st.subheader("Average Traffic per Zone")
-        fig = px.bar(
-            t_summary.sort_values("avg_traffic", ascending=True),
-            x="avg_traffic", y="Zone",
-            orientation="h",
-            color="avg_traffic",
-            color_continuous_scale="Oranges",
+        fig = px.line(
+            filtered,
+            x="datetime",
+            y="traffic",
+            color="Zone",
+            markers=True,
             template="plotly_dark",
         )
-        fig.update_layout(showlegend=False, coloraxis_showscale=False)
         st.plotly_chart(fig, use_container_width=True)
- 
+
     with col2:
         st.subheader("Peak Traffic Hour per Zone")
         fig = px.bar(
@@ -251,17 +256,6 @@ with tab2:
             labels={"peak_hour": "Hour of Day"},
         )
         st.plotly_chart(fig, use_container_width=True)
- 
-    st.subheader("Hourly Traffic Over Time")
-    zone_filter = st.multiselect(
-        "Filter Zones", options=ZONES, default=ZONES[:2]
-    )
-    filtered = mod_traffic[mod_traffic["Zone"].isin(zone_filter)]
-    fig = px.line(
-        filtered, x="datetime", y="traffic", color="Zone",
-        template="plotly_dark",
-    )
-    st.plotly_chart(fig, use_container_width=True)
  
     st.subheader("Weekend vs Weekday Traffic")
     ww = weekend_vs_weekday(mod_traffic)
