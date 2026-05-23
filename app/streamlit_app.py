@@ -1,5 +1,11 @@
 import sys
 import os
+import streamlit as st
+import html
+safe_text = html.escape(user_input)
+
+st.markdown(f"<div>{safe_text}</div>", unsafe_allow_html=True)
+api_key = st.secrets["API_KEY"]
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import streamlit as st
 import pandas as pd
