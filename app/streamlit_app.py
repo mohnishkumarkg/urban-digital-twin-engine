@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from config       import load_config
+from config.loader import load_config
 from core         import generate_population, generate_traffic, generate_weather
 from analytics    import (
     population_summary, top_zone_population, bottom_zone_population,
