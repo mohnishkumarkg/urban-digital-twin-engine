@@ -1,21 +1,20 @@
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-import streamlit as st
-import pandas as pd
 import os
 import sys
 
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
-
+import streamlit as st
+import pandas as pd
 
 api_key = st.secrets.get("API_KEY", None)
 import plotly.express as px
 import plotly.graph_objects as go
+
 from config.loader import load_config
 from core import generate_population, generate_traffic, generate_weather
-from analytics    import (
+from analytics import (
     population_summary, top_zone_population, bottom_zone_population,
     traffic_summary, peak_traffic_hour, busiest_zone, quietest_zone,
     weekend_vs_weekday, weather_summary, hottest_day, coldest_day,
