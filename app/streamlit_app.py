@@ -8,6 +8,7 @@ if PROJECT_ROOT not in sys.path:
 import streamlit as st
 import pandas as pd
 
+<<<<<<< HEAD
 api_key = st.secrets.get("API_KEY", None)
 import plotly.express as px
 import plotly.graph_objects as go
@@ -15,6 +16,15 @@ import plotly.graph_objects as go
 from config.loader import load_config
 from core import generate_population, generate_traffic, generate_weather
 from analytics import (
+=======
+
+api_key = st.secrets.get("API_KEY", None)
+import plotly.express as px
+import plotly.graph_objects as go
+from config.loader import load_config
+from core import generate_population, generate_traffic, generate_weather
+from analytics    import (
+>>>>>>> 053df2536527ff60bae5610f52d7fbf03ab82e90
     population_summary, top_zone_population, bottom_zone_population,
     traffic_summary, peak_traffic_hour, busiest_zone, quietest_zone,
     weekend_vs_weekday, weather_summary, hottest_day, coldest_day,
@@ -184,10 +194,14 @@ tab1, tab2, tab3, tab4 = st.tabs([
  
  
 # ── TAB 1 — POPULATION ──────────────────────────────────────────────────────
+<<<<<<< HEAD
 st.markdown("### 🧠 Key Insights")
 
 st.info("🚨 Traffic peaks observed during evening hours across all zones.")
 st.info("🌡️ Weather spikes correlate with increased traffic volatility.")
+=======
+
+>>>>>>> 053df2536527ff60bae5610f52d7fbf03ab82e90
 with tab1:
     st.header("Population Overview")
  
