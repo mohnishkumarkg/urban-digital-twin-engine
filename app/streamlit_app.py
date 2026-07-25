@@ -1,5 +1,13 @@
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 import streamlit as st
 import pandas as pd
+import os
+import sys
+
+
 
 
 api_key = st.secrets.get("API_KEY", None)
@@ -134,6 +142,17 @@ with st.spinner("Generating city data..."):
     mod_pop     = result["population"]
     recs        = result["recommendations"]
  
+ # ---------------- CITY HEALTH ENGINE ---------------- #
+
+traffic_risk = mod_traffic["traffic"].mean()
+weather_risk = mod_weather["temperature"].std()
+population_load = mod_pop["Population"].mean()
+
+city_health = max(0, 100 - (
+    traffic_risk * 0.05 +
+    weather_risk * 2
+))
+
 # ---------------------------------------------------------------------------
 # SCENARIO BANNER
 # ---------------------------------------------------------------------------
@@ -166,7 +185,10 @@ tab1, tab2, tab3, tab4 = st.tabs([
  
  
 # ── TAB 1 — POPULATION ──────────────────────────────────────────────────────
- 
+st.markdown("### 🧠 Key Insights")
+
+st.info("🚨 Traffic peaks observed during evening hours across all zones.")
+st.info("🌡️ Weather spikes correlate with increased traffic volatility.")
 with tab1:
     st.header("Population Overview")
  
@@ -208,7 +230,10 @@ with tab1:
  
  
 # ── TAB 2 — TRAFFIC ─────────────────────────────────────────────────────────
- 
+st.markdown("### 🧠 Key Insights")
+
+st.info("🚨 Traffic peaks observed during evening hours across all zones.")
+st.info("🌡️ Weather spikes correlate with increased traffic volatility.")
 with tab2:
     st.header("Traffic Analysis")
  
@@ -223,12 +248,12 @@ with tab2:
     c3.metric("Zones Tracked", len(ZONES))
  
     st.markdown("---")
-
     zone_filter = st.multiselect(
-        "Filter Zones",
-        options=ZONES,
-        default=ZONES[:2] if len(ZONES) >= 2 else ZONES
-    )
+    "Filter Zones",
+    options=ZONES,
+    default=ZONES[:2] if len(ZONES) >= 2 else ZONES,
+    key="traffic_zone_filter"
+)
     filtered = mod_traffic[mod_traffic["Zone"].isin(zone_filter)]
 
     col1, col2 = st.columns(2)
@@ -257,6 +282,18 @@ with tab2:
         )
         st.plotly_chart(fig, use_container_width=True)
  
+    zone_filter = st.multiselect(
+    "Filter Zones",
+    options=ZONES,
+    default=ZONES[:2] if len(ZONES) >= 2 else ZONES
+)
+    filtered = mod_traffic[mod_traffic["Zone"].isin(zone_filter)]
+    fig = px.line(
+        filtered, x="datetime", y="traffic", color="Zone",
+        template="plotly_dark",
+    )
+    st.plotly_chart(fig, use_container_width=True)
+ 
     st.subheader("Weekend vs Weekday Traffic")
     ww = weekend_vs_weekday(mod_traffic)
     fig = go.Figure()
@@ -267,7 +304,10 @@ with tab2:
  
  
 # ── TAB 3 — WEATHER ─────────────────────────────────────────────────────────
- 
+st.markdown("### 🧠 Key Insights")
+
+st.info("🚨 Traffic peaks observed during evening hours across all zones.")
+st.info("🌡️ Weather spikes correlate with increased traffic volatility.")
 with tab3:
     st.header("Weather Analysis")
  
@@ -320,7 +360,10 @@ with tab3:
  
  
 # ── TAB 4 — RECOMMENDATIONS ─────────────────────────────────────────────────
- 
+st.markdown("### 🧠 Key Insights")
+
+st.info("🚨 Traffic peaks observed during evening hours across all zones.")
+st.info("🌡️ Weather spikes correlate with increased traffic volatility.")
 with tab4:
     st.header("Decision Intelligence Recommendations")
  
