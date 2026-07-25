@@ -8,7 +8,6 @@ if PROJECT_ROOT not in sys.path:
 import streamlit as st
 import pandas as pd
 
-HEAD
 api_key = st.secrets.get("API_KEY", None)
 import plotly.express as px
 import plotly.graph_objects as go
