@@ -192,7 +192,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
  
  
 # ── TAB 1 — POPULATION ──────────────────────────────────────────────────────
-HEAD
+
 st.markdown("### 🧠 Key Insights")
 
 st.info("🚨 Traffic peaks observed during evening hours across all zones.")
